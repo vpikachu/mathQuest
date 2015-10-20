@@ -123,11 +123,13 @@ PlayGround.init1 = function(){
 };
 
 PlayGround.doFlow = function(){
+
     PlayGround.secondCounter -= Game.now - Game.elapsed;
     PlayGround.timer.text = "Remain: " + Math.floor(PlayGround.secondCounter/1000);
 
     if(PlayGround.message.alpha > 0){
-        PlayGround.message.alpha -= 0.01;
+        PlayGround.message.alpha -= (Game.now - Game.elapsed)/2000;
+
     }
     if(PlayGround.secondCounter < 0) {
         Game.showResult();
