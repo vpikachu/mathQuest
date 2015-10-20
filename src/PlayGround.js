@@ -123,7 +123,7 @@ PlayGround.init1 = function(){
 };
 
 PlayGround.doFlow = function(){
-    ;
+
     PlayGround.secondCounter -= Game.now - Game.elapsed;
     PlayGround.timer.text = "Remain: " + Math.floor(PlayGround.secondCounter/1000);
 
